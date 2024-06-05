@@ -1,6 +1,5 @@
 import { Box, VStack, Text, Collapse, IconButton } from "@chakra-ui/react";
 import { useState } from "react";
-import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 
 const SidebarSection = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,7 +9,7 @@ const SidebarSection = ({ title, children }) => {
       <Box display="flex" justifyContent="space-between" alignItems="center" p={4} bg="gray.700" color="white" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
         <Text fontSize="lg">{title}</Text>
         <IconButton
-          icon={isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+          icon={isOpen ? <Text>▲</Text> : <Text>▼</Text>}
           variant="ghost"
           color="white"
           aria-label="Toggle Section"
